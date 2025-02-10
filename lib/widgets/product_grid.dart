@@ -143,7 +143,6 @@
 
 import 'package:ecommerceapp/config/routes/router.gr.dart';
 import 'package:flutter/material.dart';
-// TODO: add flutter_svg package to pubspec.yaml
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:auto_route/auto_route.dart';
 
@@ -156,6 +155,7 @@ class ProductGrid extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: GridView.builder(
         shrinkWrap: true,
+        physics: const BouncingScrollPhysics(),
         itemCount: newDemoProducts.length,
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,

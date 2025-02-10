@@ -26,7 +26,6 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
       //   elevation: 0,
       // ),
       body: SingleChildScrollView(
-        // padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
