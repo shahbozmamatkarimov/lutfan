@@ -1,7 +1,10 @@
+import 'package:ecommerceapp/features/home/domain/entities/category_entity.dart';
 import 'package:flutter/material.dart';
 
 class CategoryFilter extends StatefulWidget {
-  const CategoryFilter({super.key});
+  final List<CategoryEntity> category;
+
+  const CategoryFilter({super.key, required this.category});
 
   @override
   _CategoryFilterState createState() => _CategoryFilterState();
@@ -12,35 +15,19 @@ class _CategoryFilterState extends State<CategoryFilter> {
 
   @override
   Widget build(BuildContext context) {
-    final categories = [
-      'All',
-      'Nike',
-      'Adidas',
-      'Puma',
-      'Asics',
-      'Nike1',
-      'Adidas1',
-      'Puma1',
-      'Asics1',
-      'Nike2',
-      'Adidas2',
-      'Puma2',
-      'Asics2'
-    ];
-
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: categories.map((category) {
+        children: (widget.category ?? []).map((category) {
           final isSelected = category == selectedCategory;
           return Container(
             margin: const EdgeInsets.only(right: 8),
             child: FilterChip(
-              label: Text(category),
+              label: Text(category.title),
               selected: isSelected,
               onSelected: (bool selected) {
                 setState(() {
-                  selectedCategory = category; // Kategoriyani yangilash
+                  selectedCategory = "$category.id"; // Kategoriyani yangilash
                 });
               },
               selectedColor: isSelected ? Colors.black : Colors.white,

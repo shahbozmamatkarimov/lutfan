@@ -36,6 +36,7 @@ class _MainScreenState extends State<MainScreen> {
         CartRoute(),
         HomeRoute(),
         OrdersRoute(),
+        OrdersRoute(),
         // ProductDetailRoute(id: 1),
         // SearchRoute(),
         // NotificationRoute(),

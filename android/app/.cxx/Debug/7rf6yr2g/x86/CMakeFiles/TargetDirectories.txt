@@ -1,0 +1,2 @@
+/home/shahboz/Startup/flutter/ecommerceapp/android/app/.cxx/Debug/7rf6yr2g/x86/CMakeFiles/edit_cache.dir
+/home/shahboz/Startup/flutter/ecommerceapp/android/app/.cxx/Debug/7rf6yr2g/x86/CMakeFiles/rebuild_cache.dir
