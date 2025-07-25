@@ -1,7 +1,5 @@
-import 'package:ecommerceapp/screens/product_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'features/home/presentation/pages/home_screen.dart';
 import 'package:ecommerceapp/config/routes/router.dart';
 
 void main() {

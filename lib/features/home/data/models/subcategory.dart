@@ -5,12 +5,12 @@ part 'subcategory.g.dart';
 @JsonSerializable()
 class Subcategory {
   final int id;
-  final String icon;
+  // final String icon;
   final String title;
 
   Subcategory({
     required this.id,
-    required this.icon,
+    // required this.icon,
     required this.title,
   });
 

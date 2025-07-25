@@ -1,11 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:ecommerceapp/config/routes/router.gr.dart';
 import 'package:ecommerceapp/core/resources/app_colors.dart';
 import 'package:ecommerceapp/core/util/responsive.dart';
-import 'package:ecommerceapp/core/widgets/w_bottom_bar_item.dart';
-import 'package:ecommerceapp/core/widgets/w_button.dart';
 
 @RoutePage()
 class MainScreen extends StatefulWidget {

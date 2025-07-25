@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:ecommerceapp/features/home/domain/entities/category_entity.dart';
 import 'package:ecommerceapp/features/home/domain/entities/home_entity.dart';
-import 'package:ecommerceapp/widgets/product_grid.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:ecommerceapp/core/network/urls.dart';
 

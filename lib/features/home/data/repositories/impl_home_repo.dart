@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:ecommerceapp/core/error/exception_handler.dart';
 import 'package:ecommerceapp/core/resources/data_state.dart';
 import 'package:ecommerceapp/features/home/data/data_sources/home_service.dart';
@@ -57,6 +56,14 @@ class ImplProductRepo extends ProductRepo {
           List<ProductEntity>.from(response.data);
       final List<CategoryEntity> category =
           List<CategoryEntity>.from(subcategories.data);
+
+      // final List<ProductEntity> products = (response.data as List)
+      //     .map((json) => ProductEntity.fromJson(json))
+      //     .toList();
+
+      // final List<CategoryEntity> category = (subcategories.data as List)
+      //     .map((json) => CategoryEntity.fromJson(json))
+      //     .toList();
 
       print('Products: $products');
       print('Categories: $category');

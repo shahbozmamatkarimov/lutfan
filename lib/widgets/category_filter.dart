@@ -1,3 +1,4 @@
+import 'package:ecommerceapp/features/home/data/models/subcategory.dart';
 import 'package:ecommerceapp/features/home/domain/entities/category_entity.dart';
 import 'package:flutter/material.dart';
 
@@ -12,13 +13,37 @@ class CategoryFilter extends StatefulWidget {
 
 class _CategoryFilterState extends State<CategoryFilter> {
   String selectedCategory = 'All'; // Tanlangan kategoriya
+  List<Subcategory> allSubcategories = [];
+
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   allSubcategories =
+  //       widget.category.expand((category) => category.subcategories).toList();
+  // }
+
+  @override
+  void initState() {
+    super.initState();
+
+    print('CATEGORY LENGTH: ${widget.category.length}');
+    for (final cat in widget.category) {
+      print(
+          'Category: ${cat.title}, Subcategories: ${cat.subcategories.length}');
+    }
+
+    allSubcategories =
+        widget.category.expand((category) => category.subcategories).toList();
+
+    print('Total subcategories: ${allSubcategories.length}');
+  }
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: (widget.category ?? []).map((category) {
+        children: (allSubcategories ?? []).map((category) {
           final isSelected = category == selectedCategory;
           return Container(
             margin: const EdgeInsets.only(right: 8),

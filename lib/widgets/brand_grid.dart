@@ -1,130 +1,29 @@
+import 'package:ecommerceapp/features/home/domain/entities/category_entity.dart';
 import 'package:flutter/material.dart';
 
 class BrandGrid extends StatefulWidget {
-  const BrandGrid({super.key});
+  final List<CategoryEntity> category;
+  const BrandGrid({super.key, required this.category});
 
   @override
   _BrandGridState createState() => _BrandGridState();
 }
 
 class _BrandGridState extends State<BrandGrid> {
-  String? selectedBrand; // Tanlangan brandni saqlash
-
-  final List<Map<String, String>> brands = [
-    {
-      'name': 'Hoodies',
-      'logo':
-          'https://eu.pangaia.com/cdn/shop/products/Recycled-Cotton-Hoodie-Navy-1.png?crop=center&height=1999&v=1720190018&width=1500'
-    },
-    {
-      'name': 'Shoes',
-      'logo':
-          'https://static.nike.com/a/images/t_default/450ed1df-8e17-4d87-a244-85697874661c/NIKE+REVOLUTION+7.png'
-    },
-    {
-      'name': 'Bags',
-      'logo':
-          'https://uppercase.co.in/cdn/shop/files/2900edb1blu_01.png?v=1738227865'
-    },
-    {
-      'name': 'Accessories',
-      'logo':
-          'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MA7E4?wid=532&hei=582&fmt=png-alpha&.v=1723930332796'
-    },
-    {
-      'name': 'Hoodies1',
-      'logo':
-          'https://eu.pangaia.com/cdn/shop/products/Recycled-Cotton-Hoodie-Navy-1.png?crop=center&height=1999&v=1720190018&width=1500'
-    },
-    {
-      'name': 'Shoes1',
-      'logo':
-          'https://static.nike.com/a/images/t_default/450ed1df-8e17-4d87-a244-85697874661c/NIKE+REVOLUTION+7.png'
-    },
-    {
-      'name': 'Bags1',
-      'logo':
-          'https://uppercase.co.in/cdn/shop/files/2900edb1blu_01.png?v=1738227865'
-    },
-    {
-      'name': 'Accessories1',
-      'logo':
-          'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MA7E4?wid=532&hei=582&fmt=png-alpha&.v=1723930332796'
-    },
-    {
-      'name': 'Hoodies2',
-      'logo':
-          'https://eu.pangaia.com/cdn/shop/products/Recycled-Cotton-Hoodie-Navy-1.png?crop=center&height=1999&v=1720190018&width=1500'
-    },
-    {
-      'name': 'Shoes2',
-      'logo':
-          'https://static.nike.com/a/images/t_default/450ed1df-8e17-4d87-a244-85697874661c/NIKE+REVOLUTION+7.png'
-    },
-    {
-      'name': 'Bags2',
-      'logo':
-          'https://uppercase.co.in/cdn/shop/files/2900edb1blu_01.png?v=1738227865'
-    },
-    {
-      'name': 'Accessories2',
-      'logo':
-          'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MA7E4?wid=532&hei=582&fmt=png-alpha&.v=1723930332796'
-    },
-    {
-      'name': 'Hoodies3',
-      'logo':
-          'https://eu.pangaia.com/cdn/shop/products/Recycled-Cotton-Hoodie-Navy-1.png?crop=center&height=1999&v=1720190018&width=1500'
-    },
-    {
-      'name': 'Shoes3',
-      'logo':
-          'https://static.nike.com/a/images/t_default/450ed1df-8e17-4d87-a244-85697874661c/NIKE+REVOLUTION+7.png'
-    },
-    {
-      'name': 'Bags3',
-      'logo':
-          'https://uppercase.co.in/cdn/shop/files/2900edb1blu_01.png?v=1738227865'
-    },
-    {
-      'name': 'Accessories3',
-      'logo':
-          'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MA7E4?wid=532&hei=582&fmt=png-alpha&.v=1723930332796'
-    },
-    {
-      'name': 'Hoodies4',
-      'logo':
-          'https://eu.pangaia.com/cdn/shop/products/Recycled-Cotton-Hoodie-Navy-1.png?crop=center&height=1999&v=1720190018&width=1500'
-    },
-    {
-      'name': 'Shoes4',
-      'logo':
-          'https://static.nike.com/a/images/t_default/450ed1df-8e17-4d87-a244-85697874661c/NIKE+REVOLUTION+7.png'
-    },
-    {
-      'name': 'Bags4',
-      'logo':
-          'https://uppercase.co.in/cdn/shop/files/2900edb1blu_01.png?v=1738227865'
-    },
-    {
-      'name': 'Accessories4',
-      'logo':
-          'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MA7E4?wid=532&hei=582&fmt=png-alpha&.v=1723930332796'
-    },
-  ];
+  int? selectedBrand; // Tanlangan brandni saqlash
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: brands.map<Widget>((brand) {
-          final isSelected = selectedBrand == brand['name']; // Tanlanganmi?
+        children: widget.category.map<Widget>((brand) {
+          final isSelected = selectedBrand == brand.id; // Tanlanganmi?
 
           return GestureDetector(
             onTap: () {
               setState(() {
-                selectedBrand = brand['name']; // Brandni tanlash
+                selectedBrand = brand.id; // Brandni tanlash
               });
             },
             child: Container(
@@ -138,17 +37,12 @@ class _BrandGridState extends State<BrandGrid> {
                       shape: BoxShape.circle,
                     ),
                     clipBehavior: Clip.hardEdge,
-                    padding: const EdgeInsets.all(4),
-                    child: Image.network(
-                      brand['logo']!,
-                      height: 56,
-                      width: 56,
-                      fit: BoxFit.cover,
-                    ),
+                    padding: const EdgeInsets.all(10),
+                    child: Text(brand.icon, style: TextStyle(fontSize: 40),),
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    brand['name']!,
+                    brand.title!,
                     style: TextStyle(
                       fontSize: 12,
                       color: isSelected ? Colors.black : const Color(0xFF272727), // Tanlangan bo‘lsa qora

@@ -1,5 +1,7 @@
 import 'package:ecommerceapp/config/routes/router.gr.dart';
 import 'package:ecommerceapp/features/home/domain/entities/home_entity.dart';
+import 'package:ecommerceapp/features/home/presentation/widgets/productDetailModal.dart';
+import 'package:ecommerceapp/features/home/presentation/widgets/showSlideDialog.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 
@@ -25,8 +27,14 @@ class ProductGrid extends StatelessWidget {
         itemBuilder: (context, index) => ProductCard(
           product: products[index],
           onPress: () {
-            context.pushRoute(ProductDetailRoute(id: products[index].id));
+            showFullScreenSlideFromRightDialog(
+              context,
+              ProductDetailModal(product: products[index]),
+            );
           },
+          // onPress: () {
+          //   context.pushRoute(ProductDetailRoute(id: products[index].id));
+          // },
         ),
       ),
     );

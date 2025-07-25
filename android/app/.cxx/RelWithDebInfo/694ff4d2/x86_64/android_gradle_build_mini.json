@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/home/shahboz/snap/flutter/common/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/shahboz/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/shahboz/Startup/flutter/ecommerceapp/android/app/.cxx/RelWithDebInfo/694ff4d2/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/shahboz/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/shahboz/Startup/flutter/ecommerceapp/android/app/.cxx/RelWithDebInfo/694ff4d2/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

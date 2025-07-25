@@ -18,7 +18,9 @@ class CategoryEntity {
       id: json['id'],
       icon: json['icon'],
       title: json['title'],
-      subcategories: List<Subcategory>.from(json['subcategories']),
+      subcategories: (json['subcategories'] as List)
+          .map((item) => Subcategory.fromJson(item))
+          .toList(),
     );
   }
 
@@ -27,7 +29,7 @@ class CategoryEntity {
       'id': id,
       'title': title,
       'icon': icon,
-      'subcategories': subcategories,
+      'subcategories': subcategories.map((e) => e.toJson()).toList(),
     };
   }
 
@@ -40,9 +42,9 @@ class CategoryEntity {
   }) {
     return CategoryEntity(
       id: id ?? this.id,
-      icon: icon ?? this.icon,
+      icon: icon,
       title: title ?? this.title,
-      subcategories: subcategories ?? this.subcategories,
+      subcategories: subcategories,
     );
   }
 }
