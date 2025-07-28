@@ -34,6 +34,7 @@ class AppColors {
   // new
   static const Color c_89 = Color(0xFF898989);
   static const Color c_5c = Color(0xFF5C5C5C);
+  static const Color c_a12 = Color(0xFFA12AFD);
 
   static const Color danger = Color(0xFFFF4D4D);
   static const Color removeColor = Color(0xFFFF002E);
