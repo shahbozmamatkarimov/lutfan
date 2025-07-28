@@ -1,9 +1,8 @@
-import 'package:ecommerceapp/config/routes/router.gr.dart';
+import 'package:ecommerceapp/core/resources/app_colors.dart';
 import 'package:ecommerceapp/features/home/domain/entities/home_entity.dart';
 import 'package:ecommerceapp/features/home/presentation/widgets/productDetailModal.dart';
 import 'package:ecommerceapp/features/home/presentation/widgets/showSlideDialog.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
 
 class ProductGrid extends StatelessWidget {
   final List<ProductEntity> products;
@@ -20,7 +19,7 @@ class ProductGrid extends StatelessWidget {
         itemCount: products.length,
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
-          childAspectRatio: 0.7,
+          childAspectRatio: 0.59,
           mainAxisSpacing: 8,
           crossAxisSpacing: 8,
         ),
@@ -45,7 +44,7 @@ class ProductCard extends StatelessWidget {
   const ProductCard({
     Key? key,
     this.width = 140,
-    this.aspectRetio = 1.02,
+    this.aspectRetio = 3.0,
     required this.product,
     required this.onPress,
   }) : super(key: key);
@@ -56,21 +55,24 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      clipBehavior: Clip.hardEdge,
       width: width,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          border: Border.all(color: AppColors.c_89)),
       child: GestureDetector(
         onTap: onPress,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AspectRatio(
-              aspectRatio: 1.02,
+              aspectRatio: 1.0,
               child: Container(
                 clipBehavior: Clip.hardEdge,
                 // padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: const Color(0xFF979797).withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(12),
                 ),
                 // child: Image.network(
                 //   'https://florify-backend.vercel.app/api/media?file_id=' +
@@ -83,24 +85,33 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 8),
-            Text(
-              product.title,
-              style: Theme.of(context).textTheme.bodyMedium,
-              maxLines: 1,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "\$${product.price}",
-                  style: const TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xFFFF7643),
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    product.title,
+                    style: TextStyle(color: AppColors.c_5c, fontSize: 12),
+                    maxLines: 1,
                   ),
-                ),
-              ],
+                  const SizedBox(height: 12),
+                  Text(
+                    product.title,
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                    maxLines: 1,
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    "\$${product.price}",
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.primaryColor,
+                    ),
+                  ),
+                ],
+              ),
             )
           ],
         ),

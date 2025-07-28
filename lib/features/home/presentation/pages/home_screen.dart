@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:ecommerceapp/core/resources/app_colors.dart';
 import 'package:ecommerceapp/features/home/data/data_sources/home_service.dart';
 import 'package:ecommerceapp/features/home/data/repositories/impl_home_repo.dart';
 import 'package:ecommerceapp/features/home/domain/entities/category_entity.dart';
@@ -25,16 +26,15 @@ class HomeScreen extends StatelessWidget {
         return HomeBloc(homeRepo: homeRepo)..add(GetProducts());
       },
       child: Scaffold(
+        backgroundColor: AppColors.white,
         body: SafeArea(
           child: BlocBuilder<HomeBloc, HomeState>(
             builder: (context, state) {
               if (state is HomeLoading) {
-                print("hILoad");
                 return const Center(child: CircularProgressIndicator());
               } else if (state is LoadedHomeData) {
                 return _buildContent(context, state.products, state.category);
               } else if (state is HomeError) {
-                print("hIGO");
                 return Center(child: Text(state.error ?? 'Unknown error'));
               }
               return const SizedBox.shrink();

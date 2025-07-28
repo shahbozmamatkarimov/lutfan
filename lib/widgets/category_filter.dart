@@ -26,16 +26,8 @@ class _CategoryFilterState extends State<CategoryFilter> {
   void initState() {
     super.initState();
 
-    print('CATEGORY LENGTH: ${widget.category.length}');
-    for (final cat in widget.category) {
-      print(
-          'Category: ${cat.title}, Subcategories: ${cat.subcategories.length}');
-    }
-
     allSubcategories =
         widget.category.expand((category) => category.subcategories).toList();
-
-    print('Total subcategories: ${allSubcategories.length}');
   }
 
   @override
