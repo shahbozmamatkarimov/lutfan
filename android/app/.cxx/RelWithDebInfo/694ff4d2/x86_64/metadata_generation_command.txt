@@ -9,10 +9,10 @@
 -DCMAKE_ANDROID_NDK=/home/shahboz/Android/Sdk/ndk/26.3.11579264
 -DCMAKE_TOOLCHAIN_FILE=/home/shahboz/Android/Sdk/ndk/26.3.11579264/build/cmake/android.toolchain.cmake
 -DCMAKE_MAKE_PROGRAM=/home/shahboz/Android/Sdk/cmake/3.22.1/bin/ninja
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/shahboz/Startup/flutter/ecommerceapp/build/app/intermediates/cxx/RelWithDebInfo/694ff4d2/obj/x86_64
--DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/home/shahboz/Startup/flutter/ecommerceapp/build/app/intermediates/cxx/RelWithDebInfo/694ff4d2/obj/x86_64
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/shahboz/Startup/flutter/lutfan/build/app/intermediates/cxx/RelWithDebInfo/694ff4d2/obj/x86_64
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/home/shahboz/Startup/flutter/lutfan/build/app/intermediates/cxx/RelWithDebInfo/694ff4d2/obj/x86_64
 -DCMAKE_BUILD_TYPE=RelWithDebInfo
--B/home/shahboz/Startup/flutter/ecommerceapp/android/app/.cxx/RelWithDebInfo/694ff4d2/x86_64
+-B/home/shahboz/Startup/flutter/lutfan/android/app/.cxx/RelWithDebInfo/694ff4d2/x86_64
 -GNinja
 -Wno-dev
 --no-warn-unused-cli

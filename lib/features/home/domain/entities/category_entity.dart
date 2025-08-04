@@ -1,4 +1,4 @@
-import 'package:ecommerceapp/features/home/data/models/subcategory.dart';
+import 'package:lutfan/features/home/data/models/subcategory.dart';
 
 class CategoryEntity {
   final int id;

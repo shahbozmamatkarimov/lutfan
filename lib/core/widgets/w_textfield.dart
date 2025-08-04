@@ -1,4 +1,4 @@
-import 'package:ecommerceapp/core/widgets/w_label.dart';
+import 'package:lutfan/core/widgets/w_label.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';

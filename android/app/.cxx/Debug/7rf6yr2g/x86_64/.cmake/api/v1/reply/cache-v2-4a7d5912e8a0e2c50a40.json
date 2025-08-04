@@ -151,7 +151,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/shahboz/Startup/flutter/ecommerceapp/android/app/.cxx/Debug/7rf6yr2g/x86_64"
+			"value" : "/home/shahboz/Startup/flutter/lutfan/android/app/.cxx/Debug/7rf6yr2g/x86_64"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -751,7 +751,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "/home/shahboz/Startup/flutter/ecommerceapp/build/app/intermediates/cxx/Debug/7rf6yr2g/obj/x86_64"
+			"value" : "/home/shahboz/Startup/flutter/lutfan/build/app/intermediates/cxx/Debug/7rf6yr2g/obj/x86_64"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -1023,7 +1023,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "/home/shahboz/Startup/flutter/ecommerceapp/build/app/intermediates/cxx/Debug/7rf6yr2g/obj/x86_64"
+			"value" : "/home/shahboz/Startup/flutter/lutfan/build/app/intermediates/cxx/Debug/7rf6yr2g/obj/x86_64"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1343,7 +1343,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/shahboz/Startup/flutter/ecommerceapp/android/app/.cxx/Debug/7rf6yr2g/x86_64"
+			"value" : "/home/shahboz/Startup/flutter/lutfan/android/app/.cxx/Debug/7rf6yr2g/x86_64"
 		},
 		{
 			"name" : "Project_IS_TOP_LEVEL",

@@ -14,7 +14,7 @@ class _HomeService implements HomeService {
     this.baseUrl,
     this.errorLogger,
   }) {
-    baseUrl ??= 'https://florify-backend.vercel.app/api/';
+    baseUrl ??= 'https://api.lutfan.uz/api/';
   }
 
   final Dio _dio;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ecommerceapp/config/routes/router.dart';
+import 'package:lutfan/config/routes/router.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'IlmNur',
+      title: 'Lutfan',
       debugShowCheckedModeBanner: false,
       // color: AppColors.backgroundColor,
       theme: ThemeData(

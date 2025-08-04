@@ -1,5 +1,5 @@
-import 'package:ecommerceapp/features/home/data/models/subcategory.dart';
-import 'package:ecommerceapp/features/home/domain/entities/category_entity.dart';
+import 'package:lutfan/features/home/data/models/subcategory.dart';
+import 'package:lutfan/features/home/domain/entities/category_entity.dart';
 import 'package:flutter/material.dart';
 
 class CategoryFilter extends StatefulWidget {

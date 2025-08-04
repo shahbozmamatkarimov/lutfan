@@ -1,9 +1,9 @@
-import 'package:ecommerceapp/core/resources/data_state.dart';
-import 'package:ecommerceapp/core/resources/state_status.dart';
-import 'package:ecommerceapp/features/home/data/models/home.dart';
-import 'package:ecommerceapp/features/home/domain/entities/category_entity.dart';
-import 'package:ecommerceapp/features/home/domain/entities/home_entity.dart';
-import 'package:ecommerceapp/features/home/domain/repositories/home_repo.dart';
+import 'package:lutfan/core/resources/data_state.dart';
+import 'package:lutfan/core/resources/state_status.dart';
+import 'package:lutfan/features/home/data/models/home.dart';
+import 'package:lutfan/features/home/domain/entities/category_entity.dart';
+import 'package:lutfan/features/home/domain/entities/home_entity.dart';
+import 'package:lutfan/features/home/domain/repositories/home_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 part 'home_event.dart';

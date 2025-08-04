@@ -1,4 +1,4 @@
-import 'package:ecommerceapp/features/home/domain/entities/category_entity.dart';
+import 'package:lutfan/features/home/domain/entities/category_entity.dart';
 import 'package:flutter/material.dart';
 
 class BrandGrid extends StatefulWidget {

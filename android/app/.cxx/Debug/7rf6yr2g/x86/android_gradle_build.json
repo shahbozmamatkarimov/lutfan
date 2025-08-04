@@ -6,14 +6,14 @@
     [
       "/home/shahboz/Android/Sdk/cmake/3.22.1/bin/ninja",
       "-C",
-      "/home/shahboz/Startup/flutter/ecommerceapp/android/app/.cxx/Debug/7rf6yr2g/x86",
+      "/home/shahboz/Startup/flutter/lutfan/android/app/.cxx/Debug/7rf6yr2g/x86",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
     "/home/shahboz/Android/Sdk/cmake/3.22.1/bin/ninja",
     "-C",
-    "/home/shahboz/Startup/flutter/ecommerceapp/android/app/.cxx/Debug/7rf6yr2g/x86",
+    "/home/shahboz/Startup/flutter/lutfan/android/app/.cxx/Debug/7rf6yr2g/x86",
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {},

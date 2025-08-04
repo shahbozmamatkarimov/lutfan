@@ -1,4 +1,4 @@
-import 'package:ecommerceapp/features/home/data/models/subcategory.dart';
+import 'package:lutfan/features/home/data/models/subcategory.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'category.g.dart';

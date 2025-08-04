@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:ecommerceapp/core/widgets/w_button.dart';
+import 'package:lutfan/core/widgets/w_button.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerceapp/config/routes/router.gr.dart';
-import 'package:ecommerceapp/core/resources/app_colors.dart';
-import 'package:ecommerceapp/core/util/responsive.dart';
+import 'package:lutfan/config/routes/router.gr.dart';
+import 'package:lutfan/core/resources/app_colors.dart';
+import 'package:lutfan/core/util/responsive.dart';
 import 'package:flutter_svg/svg.dart';
 
 @RoutePage()
@@ -59,13 +59,14 @@ class _MainScreenState extends State<MainScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      _buildSocialItem("assets/svg/icon/uzb.svg", "O'zbekcha"),
-                      const SizedBox(height: 16),
                       _buildSocialItem(
-                          "assets/svg/icon/telegram.svg", '@lutfan_gullar'),
+                          "assets/svg/icon/uz.png", "O'zbekcha", 'png'),
+                      const SizedBox(height: 16),
+                      _buildSocialItem("assets/svg/icon/telegram.svg",
+                          '@lutfan_gullar', 'svg'),
                       const SizedBox(height: 8),
                       _buildSocialItem("assets/svg/icon/instagram.svg",
-                          '@lutfan_gullar'), // instagram
+                          '@lutfan_gullar', 'svg'), // instagram
                     ],
                   ),
                 ),
@@ -97,13 +98,19 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  Widget _buildSocialItem(String assetName, String username) {
+  Widget _buildSocialItem(String assetName, String username, String type) {
     return Row(
       children: [
-        SvgPicture.asset(assetName, width: 24),
+        if (type == 'svg')
+          SvgPicture.asset(assetName, width: 24)
+        else
+          Image.asset(assetName, width: 24),
         const SizedBox(width: 8),
         Text(username,
             style: const TextStyle(color: Colors.white, fontSize: 18)),
+        const SizedBox(width: 8),
+        if (type != 'svg')
+          SvgPicture.asset("assets/svg/icon/langarrow.svg")
       ],
     );
   }
@@ -158,16 +165,15 @@ class _MainScreenState extends State<MainScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // SvgPicture.asset("assets/svg/icon/menu.svg"),
+                    SizedBox(
+                      width: 30,
+                    ),
+                    SvgPicture.asset("assets/svg/icon/logo.svg"),
                     GestureDetector(
                       key: _scaffoldKey,
                       onTap: _toggleMenu,
                       child: SvgPicture.asset('assets/svg/icon/menu.svg'),
                     ),
-                    SvgPicture.asset("assets/svg/icon/logo.svg"),
-                    SizedBox(
-                      width: 30,
-                    )
                   ],
                 ),
               ),
@@ -177,23 +183,11 @@ class _MainScreenState extends State<MainScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                if (isDesktop)
-                  Container(
-                    margin: const EdgeInsets.all(16),
-                    width: 270,
-                    child: const SizedBox(
-                        // child: SideMenuWidget(),
-                        ),
-                  ),
                 Expanded(
                   // flex: 7,
                   child: Container(
-                    margin: isDesktop
-                        ? const EdgeInsets.only(top: 16, bottom: 16, right: 16)
-                        : null,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
-                      color: isDesktop ? AppColors.white : null,
                     ),
                     clipBehavior: Clip.hardEdge,
                     child: child,

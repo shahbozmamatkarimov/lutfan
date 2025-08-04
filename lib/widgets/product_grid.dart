@@ -1,7 +1,8 @@
-import 'package:ecommerceapp/core/resources/app_colors.dart';
-import 'package:ecommerceapp/features/home/domain/entities/home_entity.dart';
-import 'package:ecommerceapp/features/home/presentation/widgets/productDetailModal.dart';
-import 'package:ecommerceapp/features/home/presentation/widgets/showSlideDialog.dart';
+import 'package:lutfan/core/resources/app_colors.dart';
+import 'package:lutfan/core/resources/app_keys.dart';
+import 'package:lutfan/features/home/domain/entities/home_entity.dart';
+import 'package:lutfan/features/home/presentation/widgets/productDetailModal.dart';
+import 'package:lutfan/features/home/presentation/widgets/showSlideDialog.dart';
 import 'package:flutter/material.dart';
 
 class ProductGrid extends StatelessWidget {
@@ -75,13 +76,16 @@ class ProductCard extends StatelessWidget {
                   color: const Color(0xFF979797).withOpacity(0.1),
                 ),
                 // child: Image.network(
-                //   'https://florify-backend.vercel.app/api/media?file_id=' +
+                //   '${AppKeys.baseURL}media?file_id=' +
                 //       product.images[0],
                 //   fit: BoxFit.cover,
                 // ),
-                child: Image.network(
-                  'https://florify-backend.vercel.app/api/media?file_id=${product.images[0]}',
-                  fit: BoxFit.cover,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
+                  child: Image.network(
+                    '${AppKeys.baseURL}media?file_id=${product.images[0]}',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
@@ -103,10 +107,9 @@ class ProductCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   Text(
-                    "\$${product.price}",
+                    "${product.price} so'm",
                     style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
                       color: AppColors.primaryColor,
                     ),
                   ),

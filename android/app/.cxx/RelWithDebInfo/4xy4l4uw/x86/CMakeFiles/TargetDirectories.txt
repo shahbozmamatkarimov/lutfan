@@ -1,0 +1,2 @@
+/home/shahboz/Startup/flutter/lutfan/android/app/.cxx/RelWithDebInfo/4xy4l4uw/x86/CMakeFiles/edit_cache.dir
+/home/shahboz/Startup/flutter/lutfan/android/app/.cxx/RelWithDebInfo/4xy4l4uw/x86/CMakeFiles/rebuild_cache.dir

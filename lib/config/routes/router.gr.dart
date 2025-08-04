@@ -9,13 +9,13 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i6;
-import 'package:ecommerceapp/features/home/presentation/pages/home_screen.dart'
+import 'package:lutfan/features/home/presentation/pages/home_screen.dart'
     as _i2;
-import 'package:ecommerceapp/features/home/presentation/pages/main_screen.dart'
+import 'package:lutfan/features/home/presentation/pages/main_screen.dart'
     as _i3;
-import 'package:ecommerceapp/screens/cart_screen.dart' as _i1;
-import 'package:ecommerceapp/screens/order_screen.dart' as _i4;
-import 'package:ecommerceapp/screens/product_screen.dart' as _i5;
+import 'package:lutfan/screens/cart_screen.dart' as _i1;
+import 'package:lutfan/screens/order_screen.dart' as _i4;
+import 'package:lutfan/screens/product_screen.dart' as _i5;
 import 'package:flutter/material.dart' as _i7;
 
 abstract class $AppRouter extends _i6.RootStackRouter {
